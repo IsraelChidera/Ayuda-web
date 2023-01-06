@@ -17,7 +17,7 @@ const Hero = () => {
             </span>
           </h1>
 
-          <p className='mt-6 mb-4 md:text-lg'>
+          <p className='mt-6 mb-4 md:text-lg text-center md:text-left'>
             We curate quality and immaculate sellable 
             content that will make a difference for you and 
             your brand. You can count on us.

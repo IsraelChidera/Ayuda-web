@@ -25,7 +25,7 @@ const Services = () => {
                 WHAT WE DO
             </p>
             
-            <p className='font-bold text-xl'>
+            <p className='text-xl'>
                 We are a team of passionate and talented writers 
                 and we bring you excellent solutions to your existing 
                 content structure. Ayuda is just the perfect upgrade 
