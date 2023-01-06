@@ -192,7 +192,7 @@ const Navbar = () => {
                         <div                             
                         >
                             <NavLink 
-                                to="/#plans-pricing"
+                                to="/plans-pricing"
                                 onClick={()=>setOpenMobileMenu(false)}    
                             >
                                 <button 
