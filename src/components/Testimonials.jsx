@@ -39,7 +39,7 @@ const Testimonials = () => {
                 <img 
                     src={dots} 
                     alt="dot icons"
-                    className='absolute top-0 left-4'
+                    className='md:absolute top-0 left-4'
                 />
             </div>
 
@@ -53,10 +53,9 @@ const Testimonials = () => {
                 </p>
 
                 <Swiper
-                    modules={[Navigation, Pagination, Scrollbar, A11y]}
+                    modules={[Navigation, Scrollbar, A11y]}
                     spaceBetween={50}
-                    slidesPerView={1}
-                    pagination
+                    slidesPerView={1}                    
                     navigation                        
                 >
                     <SwiperSlide>
@@ -175,15 +174,7 @@ const Testimonials = () => {
                         </div>
                     </SwiperSlide>            
                 </Swiper>
-            </div>
-
-            <div>
-                <img 
-                    src={dots2} 
-                    alt="dot icons"
-                    className='absolute bottom-0 right-4'
-                />
-            </div>
+            </div>        
 
         </div>
     </section>
