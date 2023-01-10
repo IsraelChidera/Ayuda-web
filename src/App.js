@@ -48,15 +48,14 @@ function App() {
                 <div className="relative">                  
                   <div className="bg-primary rounded-full text-white p-4 fixed right-14 bottom-10">
                     <a
-                    href="https://wa.me/2348178764726"
-                    className="whatsapp_float"
+                    href="https://wa.me/2349014960716"                    
                     target="_blank"
                     rel="noopener noreferrer"
                     >
                       <i className="fab fa-2x fa-whatsapp"></i>
                     </a>
                   </div>   
-                  
+
                   <Routes>
                     <Route exact path="/" element={<LandingPage/>}/>
                     <Route path="/plans-pricing" element={<PricingPage/>}/>                               
