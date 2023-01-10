@@ -64,7 +64,7 @@ const PricingPage = () => {
                         </p>
 
                         <p className="text-4xl font-bold">
-                            $0.06
+                            $0.05
                         </p>
 
                         <p className="text-sm">
@@ -87,7 +87,7 @@ const PricingPage = () => {
                         </p>
 
                         <p className="text-4xl font-bold">
-                            $0.05
+                            $0.04
                         </p>
 
                         <p className="text-sm">
