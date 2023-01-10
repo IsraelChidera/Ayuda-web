@@ -46,7 +46,7 @@ function App() {
               <div>            
                 
                 <div className="relative">                  
-                  <div className="bg-primary rounded-full text-white p-4 fixed right-14 bottom-10">
+                  <div className="bg-primary rounded-full text-white p-4 fixed z-50 right-14 bottom-10">
                     <a
                     href="https://wa.me/2349014960716"                    
                     target="_blank"
