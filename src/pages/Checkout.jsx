@@ -44,7 +44,7 @@ const Checkout = () => {
 
                 <div className='md:mt-10 mt-6 md:flex justify-between items-center'>
                     <p className='text-lg'>
-                        8 articles per month
+                        
                     </p>
 
                     <p className='font-semibold'>

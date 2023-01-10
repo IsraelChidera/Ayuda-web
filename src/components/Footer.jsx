@@ -15,22 +15,14 @@ const Footer = () => {
                 </p>
 
                 <div className='md:my-0 my-6 md:block flex items-center justify-center'>
-                    <ul className='flex items-center space-x-6'>
-                        <li>
-                            <span 
-                                
-                                className='rounded-full p-2 bg-primary'                                  
-                            >
-                                <i className="fa-brands fa-instagram"></i>
-                            </span>
-                        </li>
+                    <ul className='flex items-center space-x-6'>                       
 
                         <li>
                             <span 
                                 
                                 className='rounded-full p-2 bg-primary'      
                             >
-                                <i className="fa-brands fa-facebook"></i>
+                                <i className="fa fa-linkedin" aria-hidden="true"></i>
                             </span>
                         </li>
 

@@ -34,7 +34,7 @@ const PricingPage = () => {
             <section 
                 data-aos="fade-up"
                 data-aos-duration="2000"
-                className="mt-10 mb-20 md:space-y-0 space-y-10 md:grid grid-cols-3 gap-6"
+                className="mt-20 mb-20 md:space-y-0 space-y-10 md:grid grid-cols-3 gap-6"
             >
 
                 <div className="feature-one py-8 px-6 border border-darker">
@@ -52,33 +52,15 @@ const PricingPage = () => {
                         </p>
                     </div>
 
-                    <button className='mt-6 mb-4 w-full text-sm text-primary border-2 bg-white  border-primary  py-3 px-6'>
+                    <button onClick={handleSubscribe} className='mt-6 mb-4 w-full text-sm text-primary border-2 bg-white  border-primary  py-3 px-6'>
                         Start Plan
                     </button>
-
-                    <div className="text-sm mt-6 space-y-4 text-text">
-                        <p>
-                            5 social profiles
-                        </p>
-
-                        <p>
-                            5 scheduled post per profile
-                        </p>
-
-                        <p>
-                            400+ templates
-                        </p>
-
-                        <p>
-                            5 social profiles
-                        </p>
-                    </div>
                 </div>
 
                 <div className="feature-two text-white py-8 px-6 bg-primary">
                     <div className="text-center">
                         <p className="text-2xl mt-2 mb-2 font-semibold">
-                            Basic
+                            Standard
                         </p>
 
                         <p className="text-4xl font-bold">
@@ -86,7 +68,7 @@ const PricingPage = () => {
                         </p>
 
                         <p className="text-sm">
-                            per word for orders within 10,000 words
+                            per word for orders within 5,000 words
                         </p>
                     </div>
 
@@ -95,38 +77,21 @@ const PricingPage = () => {
                      >
                         Start Plan
                     </button>
-
-                    <div className="text-sm mt-6 space-y-4 text-white">
-                        <p>
-                            5 social profiles
-                        </p>
-
-                        <p>
-                            5 scheduled post per profile
-                        </p>
-
-                        <p>
-                            400+ templates
-                        </p>
-
-                        <p>
-                            5 social profiles
-                        </p>
-                    </div>
+                    
                 </div>
 
                 <div className="feature-three py-8 px-6 border border-darker">
                     <div className="text-center">
                         <p className="text-2xl mt-2 mb-2 font-semibold">
-                            Basic
+                            Premium
                         </p>
 
                         <p className="text-4xl font-bold">
-                            $0.06
+                            $0.05
                         </p>
 
                         <p className="text-sm">
-                            per word for orders within 10,000 words
+                            per word for orders within 20,000 words
                         </p>
                     </div>
 
@@ -134,9 +99,9 @@ const PricingPage = () => {
                         Start Plan
                     </button>
 
-                    <div className="text-sm mt-6 space-y-4 text-text">
+                    {/* <div className="text-sm mt-6 space-y-4 text-text">
                         <p>
-                            5 social profiles
+                            Articles above 20,000 words
                         </p>
 
                         <p>
@@ -150,7 +115,7 @@ const PricingPage = () => {
                         <p>
                             5 social profiles
                         </p>
-                    </div>
+                    </div> */}
                 </div>
 
             </section>
