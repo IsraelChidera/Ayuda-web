@@ -45,28 +45,22 @@ function App() {
             (
               <div>            
                 
-                <div>
-
-                  {/* <div>
-                    < Navbar /> 
-                  </div> */}
-
+                <div className="relative">                  
+                  <div className="bg-primary rounded-full text-white p-4 fixed right-14 bottom-10">
+                    <a
+                    href="https://wa.me/2348178764726"
+                    className="whatsapp_float"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >
+                      <i className="fab fa-2x fa-whatsapp"></i>
+                    </a>
+                  </div>   
+                  
                   <Routes>
                     <Route exact path="/" element={<LandingPage/>}/>
-                    <Route path="/plans-pricing" element={<PricingPage/>}/>                
-                    {/* <Route path="/blog" element={<Blog/>}/>
-                    <Route path="/blog/:id" element={<BlogDetail/> } /> */}
-                    {/* <Route path="/admin" element={<Admin/>}/> */}
-                    <Route path="/about" element={ <About/> } />
-                    {/* <Route 
-                      path="/posting" 
-                      element={
-                        <ProtectedRoute>
-                          <Posting/>
-                        </ProtectedRoute>
-                        
-                      }
-                    /> */}
+                    <Route path="/plans-pricing" element={<PricingPage/>}/>                               
+                    <Route path="/about" element={ <About/> } />                    
                     <Route path="/payment" element={<Checkout/>}/>
                     <Route path="*" element={<p>There's nothing here: 404!</p>} />
                   </Routes>
