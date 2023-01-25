@@ -48,9 +48,7 @@ const Testimonials = () => {
                     Testimonials
                 </h2>
 
-                <p className='font-medium text-darker pt-2 text-center'>
-                    See what our customer has to say
-                </p>
+                
 
                 <Swiper
                     modules={[Navigation, Scrollbar, A11y]}
@@ -62,27 +60,55 @@ const Testimonials = () => {
                         <div className='mx-auto w-3/4 md:w-2/4'>
                             
 
-                            <p 
-                            // className='mt-10'
-                            className="first-line:uppercase first-line:tracking-widest
-                            first-letter:text-7xl first-letter:font-bold first-letter:text-primary
-                            first-letter:mr-3 first-letter:float-left mt-12 text-center">
-                                
-                                Thank You for your service. I 
-                                am very pleased with the result. 
-                                I have seen exponencial growth 
-                                in my business and its all 
-                                thanks to your amazing service
+                            <p                             
+                                className="mt-12 text-xl text-center"
+                            >                                
+                                Delivered exactly what I requested 
+                                and well optimized
                             </p>
 
-                            <div className='text-center mt-10'>
+                            <div className='text-center mt-2'>
                                 <h4 className='text-lg text-darker font-bold'>
-                                    Ricky Aprilla
-                                </h4>
+                                    Traveltrained
+                                </h4>                                
+                            </div>
+                        </div>
+                    </SwiperSlide>
 
-                                <p className='text-sm text-darker'>
-                                    CEO, Varibo Hub
-                                </p>
+                    <SwiperSlide>
+                        <div className='mx-auto w-3/4 md:w-2/4'>
+                            
+
+                            <p                             
+                                className="mt-12 text-xl text-center"
+                            >
+                                
+                                Thank you. Well written
+                            </p>
+
+                            <div className='text-center mt-2'>
+                                <h4 className='text-lg text-darker font-bold'>
+                                    Rakalon
+                                </h4>                                
+                            </div>
+                        </div>
+                    </SwiperSlide>
+
+                    <SwiperSlide>
+                        <div className='mx-auto w-3/4 md:w-2/4'>                            
+                            <p                             
+                                className="mt-12 text-lg text-center"
+                            >                                
+                                Great delivery! Always a pleasure 
+                                working with you. I provided feedback 
+                                based I. Previous work, and it was 
+                                immediately implemented
+                            </p>
+
+                            <div className='text-center mt-2'>
+                                <h4 className='text-lg text-darker font-bold'>
+                                    Rachelf
+                                </h4>
                             </div>
                         </div>
                     </SwiperSlide>
@@ -93,83 +119,15 @@ const Testimonials = () => {
 
                             <p 
                             // className='mt-10'
-                            className="first-line:uppercase first-line:tracking-widest
-                            first-letter:text-7xl first-letter:font-bold first-letter:text-primary
-                            first-letter:mr-3 first-letter:float-left mt-12 text-center">
-                                
-                                Thank You for your service. I 
-                                am very pleased with the result. 
-                                I have seen exponencial growth 
-                                in my business and its all 
-                                thanks to your amazing service
+                                className="mt-12 text-xl text-center"
+                            >                                
+                                No need for revision
                             </p>
 
-                            <div className='text-center mt-10'>
+                            <div className='text-center mt-2'>
                                 <h4 className='text-lg text-darker font-bold'>
-                                    Ricky Aprilla
+                                    Makbar
                                 </h4>
-
-                                <p className='text-sm text-darker'>
-                                    CEO, Varibo Hub
-                                </p>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-
-                    <SwiperSlide>
-                        <div className='mx-auto w-3/4 md:w-2/4'>
-                            
-
-                            <p 
-                            // className='mt-10'
-                            className="first-line:uppercase first-line:tracking-widest
-                            first-letter:text-7xl first-letter:font-bold first-letter:text-primary
-                            first-letter:mr-3 first-letter:float-left mt-12 text-center">
-                                
-                                Thank You for your service. I 
-                                am very pleased with the result. 
-                                I have seen exponencial growth 
-                                in my business and its all 
-                                thanks to your amazing service
-                            </p>
-
-                            <div className='text-center mt-10'>
-                                <h4 className='text-lg text-darker font-bold'>
-                                    Ricky Aprilla
-                                </h4>
-
-                                <p className='text-sm text-darker'>
-                                    CEO, Varibo Hub
-                                </p>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-
-                    <SwiperSlide>
-                        <div className='mx-auto w-3/4 md:w-2/4'>
-                            
-
-                            <p 
-                            // className='mt-10'
-                            className="first-line:uppercase first-line:tracking-widest
-                            first-letter:text-7xl first-letter:font-bold first-letter:text-primary
-                            first-letter:mr-3 first-letter:float-left mt-12 text-center">
-                                
-                                Thank You for your service. I 
-                                am very pleased with the result. 
-                                I have seen exponencial growth 
-                                in my business and its all 
-                                thanks to your amazing service
-                            </p>
-
-                            <div className='text-center mt-10'>
-                                <h4 className='text-lg text-darker font-bold'>
-                                    Ricky Aprilla
-                                </h4>
-
-                                <p className='text-sm text-darker'>
-                                    CEO, Varibo Hub
-                                </p>
                             </div>
                         </div>
                     </SwiperSlide>            

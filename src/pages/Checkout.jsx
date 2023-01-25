@@ -14,7 +14,7 @@ const Checkout = () => {
         paystack.newTransaction({
             key:"pk_test_131cda27a7f3959aa195063b755e392acc385460",
             amount:amount*100,
-            // currency: 'USD',
+            currency: 'USD',
             email,
             firstname,
             lastname,      

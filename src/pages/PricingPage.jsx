@@ -23,6 +23,7 @@ const PricingPage = () => {
                 <h1 className='text-4xl'>
                     Plans {"&"} Pricing
                 </h1>
+                
                 <p>
                     You can choose and manage 
                     subscriptions from here. 
