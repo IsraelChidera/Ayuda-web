@@ -16,6 +16,7 @@
     "nth-check": "2.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-paystack": "^4.0.2",
     "react-quill": "^2.0.0",
     "react-router-hash-link": "^2.4.3",
     "swiper": "^8.4.2",

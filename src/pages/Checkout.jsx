@@ -1,41 +1,34 @@
 import React, { useState } from 'react';
 import PaystackPop from '@paystack/inline-js';
 import Layout from '../components/Layout';
+import { PaystackButton } from 'react-paystack';
 
 const Checkout = () => {
     const [email, setEmail]= useState("");
-    const [amount, setAmount] = useState("");
+    //const [amount, setAmount] = useState("");
+    const amount = 1000000;
     const [firstname, setFirstname] = useState("");
     const [lastname, setLastName] = useState(""); 
+    const publicKey = "pk_test_59a3034638a797cddb4d05e05025529954c7f3d0";
+   
 
-    const payWithPaystack = (e) => {
-        e.preventDefault();
-        const paystack = new PaystackPop();
-        paystack.newTransaction({
-            key:"pk_test_131cda27a7f3959aa195063b755e392acc385460",
-            amount:amount*100,
-            currency: 'USD',
-            email,
-            firstname,
-            lastname,      
-            onSuccess(transaction){
-                let message = `Payment Complete! Reference ${transaction.reference}`
-                alert(message);
-                setEmail("");
-                setAmount("");
-                setFirstname("");
-                setLastName("");
-            },
-            onCancel(){
-                alert("You have canceled the transaction")
-            }
-        })
-    }
+    const componentProps = {
+        email,
+        amount,
+        metadata: {
+          //name,
+          //phone,
+        },
+        publicKey,
+        text: "Pay Now",
+        onSuccess: () =>
+          alert("Thanks for doing business with us! Come back soon!!"),
+        onClose: () => alert("Wait! You need this oil, don't go!!!!"),
+      }
 
     return (
         <Layout>
             <section className='pt-20 px-8 lg:px-64 pb-20'>
-
                 <div>
                     <h1 className='text-4xl md:text-center'>
                         Checkout
@@ -50,7 +43,7 @@ const Checkout = () => {
                     <p className='font-semibold'>
                         Total: {" "}
                         <span>
-                            $84
+                            {amount}
                         </span>
                     </p>
                 </div>
@@ -67,19 +60,7 @@ const Checkout = () => {
                                 required 
                                 className="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" 
                             />
-                        </div>
-
-                        <div className="form-group">
-                            <label for="amount">Amount</label>
-                            <input 
-                                type="tel" 
-                                id="amount" 
-                                value={amount}
-                                onChange={(e)=>setAmount(e.target.value)}
-                                required 
-                                className="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" 
-                            />
-                        </div>
+                        </div>                        
 
                         <div className="form-group">
                             <label for="first-name">First Name</label>
@@ -103,18 +84,28 @@ const Checkout = () => {
                             />
                         </div>
 
-                        <div className="form-submit">
-                            <button 
-                                type="submit" 
-                                onClick={payWithPaystack}
-                                className="px-6 py-3 text-sm             
-                                    font-semibold rounded-full border 
-                                    border-purple-200 bg-primary text-white"
-                            > 
-                                Pay
-                            </button>
-                        </div>
+                        
                     </form>
+
+                    <div 
+                        className="mt-10 text-center py-4 text-lg             
+                            font-semibold rounded-full border 
+                            border-purple-200 bg-primary text-white"
+                    >
+                        {/* <button 
+                            type="submit" 
+                            onClick={payWithPaystack}
+                            className="px-6 py-3 text-sm             
+                                font-semibold rounded-full border 
+                                border-purple-200 bg-primary text-white"
+                        > 
+                            Pay
+                        </button> */}
+                        <PaystackButton 
+                            className="paystack-button" 
+                            {...componentProps} 
+                        />
+                    </div>
                 </div>
                 
             </section>

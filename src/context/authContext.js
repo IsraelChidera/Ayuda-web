@@ -4,7 +4,7 @@ import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 // import { getAuth, onAuthStateChanged } from "firebase/auth";
 import {useNavigate} from 'react-router-dom';
 
-const AuthContext = createContext();
+const AuthContext = createContext(); 
 
 export function AuthContextProvider({children}){ 
     const navigate = useNavigate();

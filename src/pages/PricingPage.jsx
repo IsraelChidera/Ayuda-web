@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -12,6 +12,8 @@ const PricingPage = () => {
     const handleSubscribe = () => {
         navigate("/payment")
     }
+
+    const [basicAmount, setBasicAmount] = useState("0.06");
 
   return (
     <Layout>
@@ -45,7 +47,7 @@ const PricingPage = () => {
                         </p>
 
                         <p className="text-4xl font-bold">
-                            $0.06
+                            ${basicAmount}
                         </p>
 
                         <p className="text-sm">
