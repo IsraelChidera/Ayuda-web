@@ -1,112 +1,116 @@
 import React, { useState } from 'react';
 import PaystackPop from '@paystack/inline-js';
 import Layout from '../components/Layout';
-import { PaystackButton } from 'react-paystack';
+import logo from '../assets/gt.jpg';
+import logo2 from '../assets/gtbank.png';
 
-const Checkout = () => {
+const Checkout = ({setBasicAmount}) => {
     const [email, setEmail]= useState("");
     //const [amount, setAmount] = useState("");
     const amount = 1000000;
     const [firstname, setFirstname] = useState("");
     const [lastname, setLastName] = useState(""); 
-    const publicKey = "pk_test_59a3034638a797cddb4d05e05025529954c7f3d0";
-   
-
-    const componentProps = {
-        email,
-        amount,
-        metadata: {
-          //name,
-          //phone,
-        },
-        publicKey,
-        text: "Pay Now",
-        onSuccess: () =>
-          alert("Thanks for doing business with us! Come back soon!!"),
-        onClose: () => alert("Wait! You need this oil, don't go!!!!"),
-      }
+    const publicKey = "pk_test_59a3034638a797cddb4d05e05025529954c7f3d0";       
 
     return (
         <Layout>
-            <section className='pt-20 px-8 lg:px-64 pb-20'>
+            <section className='pt-10 px-8 lg:px-64 pb-20'>
                 <div>
                     <h1 className='text-4xl md:text-center'>
                         Checkout
                     </h1>            
                 </div>
 
-                <div className='md:mt-10 mt-6 md:flex justify-between items-center'>
-                    <p className='text-lg'>
-                        
-                    </p>
+                <div className="mt-10">
+                    <div>
+                        <p className="md:text-sm">
+                            You are ordering for:
+                        </p>
 
-                    <p className='font-semibold'>
-                        Total: {" "}
-                        <span>
-                            {amount}
-                        </span>
-                    </p>
-                </div>
+                        <p className="text-primary md:text-xl font-semibold">
+                            Basic Package:
+                            per word for orders within 10,000 words
+                        </p>                        
+                    </div>
 
-                <div className='mt-10 p-2  text-darker'>
-                    <form id="paymentForm" className='space-y-6'>
-                        <div className="form-group">
-                            <label for="email">Email Address</label>
-                            <input 
-                                type="email" 
-                                id="email-address" 
-                                value={email}
-                                onChange={(e)=>setEmail(e.target.value)}
-                                required 
-                                className="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" 
-                            />
-                        </div>                        
+                    <div className="mt-4">
+                        <p className="md:text-xl font-semibold">
+                            Item Cost
+                        </p>
 
-                        <div className="form-group">
-                            <label for="first-name">First Name</label>
-                            <input 
-                                type="text" 
-                                id="first-name" 
-                                value={firstname}
-                                className="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" 
-                                onChange={(e)=>setFirstname(e.target.value)}
-                            />
-                        </div>
-
-                        <div className="form-group">
-                            <label for="last-name">Last Name</label>
-                            <input 
-                                type="text" 
-                                id="last-name" 
-                                value={lastname}
-                                className="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" 
-                                onChange={(e)=>setLastName(e.target.value)}
-                            />
-                        </div>
-
-                        
-                    </form>
-
-                    <div 
-                        className="mt-10 text-center py-4 text-lg             
-                            font-semibold rounded-full border 
-                            border-purple-200 bg-primary text-white"
-                    >
-                        {/* <button 
-                            type="submit" 
-                            onClick={payWithPaystack}
-                            className="px-6 py-3 text-sm             
-                                font-semibold rounded-full border 
-                                border-purple-200 bg-primary text-white"
-                        > 
-                            Pay
-                        </button> */}
-                        <PaystackButton 
-                            className="paystack-button" 
-                            {...componentProps} 
-                        />
+                        <p className="text-primary md:text-lg">
+                            $price
+                        </p>
                     </div>
                 </div>
+
+                <div>
+                    <p className="mt-6">
+                        Bank Payment
+                    </p>
+
+                    <p>
+                        For faster verification while making a Bank
+                        Payment, please use your full name as the
+                        depositor's name on the teller or the depositor
+                        field
+                    </p>
+
+                    <div className="flex my-8">
+                        <div className="md:mr-6 mr-0">
+                            <img src={logo} className="w-20 h-20" alt="bank logo"/>
+                        </div>
+
+                        <div>
+                            <p>
+                                <span>Bank: </span>UBA {"(Nationwide)"}
+                            </p>
+
+                            <p>
+                                <span>Account Name: </span>Ayuda {"(Nationwide)"}
+                            </p>
+
+                            <p>
+                                <span>Account Number: </span>1011234323 {"(Nationwide)"}
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="flex mb-6">
+                        <div className="md:mr-6 mr-0">
+                            <img src={logo2} className="w-20 h-20" alt="bank logo"/>
+                        </div>
+
+                        <div>
+                            <p>
+                                <span>Bank: </span>Zenith bank {"(Nationwide)"}
+                            </p>
+
+                            <p>
+                                <span>Account Name: </span>Ayuda {"(Nationwide)"}
+                            </p>
+
+                            <p>
+                                <span>Account Number: </span>1011234323 {"(Nationwide)"}
+                            </p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h1>
+                            Bank, Mobile or Internet Transfer
+                        </h1>
+
+                        <p>
+                            Just make the transfer payment into any of our
+                            above account numbers and enter your full name
+                            with your number as your narration or reference
+
+                            After payment, send an EMAIL to "info@mysch.com.ng"
+                            or send a SMS to "0814626595"
+                        </p>
+                    </div>
+                </div>                
                 
             </section>
         </Layout>

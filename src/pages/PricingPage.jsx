@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Layout from '../components/Layout';
+import Checkout from './Checkout';
 
 const PricingPage = () => {
      
@@ -11,6 +12,7 @@ const PricingPage = () => {
     const navigate = useNavigate();
     const handleSubscribe = () => {
         navigate("/payment")
+        setBasicAmount("0.06");
     }
 
     const [basicAmount, setBasicAmount] = useState("0.06");
@@ -55,9 +57,12 @@ const PricingPage = () => {
                         </p>
                     </div>
 
-                    <button onClick={handleSubscribe} className='mt-6 mb-4 w-full text-sm text-primary border-2 bg-white  border-primary  py-3 px-6'>
+                    <button 
+                        onClick={handleSubscribe} 
+                        className='mt-6 mb-4 w-full text-sm text-primary border-2 bg-white  border-primary  py-3 px-6'
+                    >
                         Start Plan
-                    </button>
+                    </button>                    
                 </div>
 
                 <div className="feature-two text-white py-8 px-6 bg-primary">
