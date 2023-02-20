@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Layout from '../components/Layout';
@@ -8,15 +8,23 @@ import Checkout from './Checkout';
 const PricingPage = () => {
      
     AOS.init();
-
+    const [basicAmount, setBasicAmount] = useState("0.06");
+    const [showView, setShowView] = useState(null);
     const navigate = useNavigate();
     const handleSubscribe = () => {
-        navigate("/payment")
-        setBasicAmount("0.06");
-    }
+        navigate("/payment")        
+        //setBasicAmount("0.06");
+    }   
 
-    const [basicAmount, setBasicAmount] = useState("0.06");
+    const handleSubscribe2 = () => {
+        navigate("/payment/2")        
+        //setBasicAmount("0.06");
+    } 
 
+    const handleSubscribe3 = (content) => {
+        navigate("/payment/3")        
+        //setBasicAmount("0.06");
+    } 
   return (
     <Layout>
         <section className='lg:mt-0 lg:mb-32 mb-0 mt-0 pt-20 px-8 lg:px-32 pb-20'>
@@ -49,7 +57,7 @@ const PricingPage = () => {
                         </p>
 
                         <p className="text-4xl font-bold">
-                            ${basicAmount}
+                            $0.06
                         </p>
 
                         <p className="text-sm">
@@ -82,6 +90,7 @@ const PricingPage = () => {
 
                     <button className='mt-6 mb-4 w-full text-sm text-primary border-2
                      bg-white border-white  py-3 px-6'
+                     onClick={handleSubscribe2}
                      >
                         Start Plan
                     </button>
@@ -103,27 +112,13 @@ const PricingPage = () => {
                         </p>
                     </div>
 
-                    <button className='mt-6 mb-4 w-full text-sm text-primary border-2 bg-white  border-primary  py-3 px-6'>
+                    <button 
+                        className='mt-6 mb-4 w-full text-sm text-primary border-2 bg-white  border-primary  py-3 px-6'
+                        onClick={handleSubscribe3}    
+                    >
                         Start Plan
                     </button>
-
-                    {/* <div className="text-sm mt-6 space-y-4 text-text">
-                        <p>
-                            Articles above 20,000 words
-                        </p>
-
-                        <p>
-                            5 scheduled post per profile
-                        </p>
-
-                        <p>
-                            400+ templates
-                        </p>
-
-                        <p>
-                            5 social profiles
-                        </p>
-                    </div> */}
+                    
                 </div>
 
             </section>

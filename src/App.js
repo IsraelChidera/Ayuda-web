@@ -2,6 +2,8 @@ import {useState, useEffect} from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Checkout from './pages/Checkout';
+import Checkout2 from './pages/Checkout2';
+import Checkout3 from './pages/Checkout3';
 import LandingPage from './pages/LandingPage';
 import PricingPage from './pages/PricingPage';
 import Admin from './pages/Admin';
@@ -61,6 +63,8 @@ function App() {
                     <Route path="/plans-pricing" element={<PricingPage/>}/>                               
                     <Route path="/about" element={ <About/> } />                    
                     <Route path="/payment" element={<Checkout/>}/>
+                    <Route path="/payment/2" element={<Checkout2/>}/>
+                    <Route path="/payment/3" element={<Checkout3/>}/>
                     <Route path="*" element={<p>There's nothing here: 404!</p>} />
                   </Routes>
                 </div>

@@ -3,7 +3,7 @@ import Layout from '../components/Layout';
 import logo from '../assets/gt.jpg';
 import logo2 from '../assets/gtbank.png';
 
-const Checkout = ({setBasicAmount}) => {  
+const Checkout2 = ({setBasicAmount}) => {  
 
     return (
         <Layout>
@@ -20,9 +20,10 @@ const Checkout = ({setBasicAmount}) => {
                             You are ordering for:
                         </p>
 
-                        <p className="text-primary text-xl md:text-4xl font-semibold">
-                            Basic Package: $0.06
-                            per word for orders within 10,000 words
+                        <p className="text-primary text-xl md:text-4xl font-semibold">                            
+                            Standard Package: 
+                            $0.05
+                            per word for orders within 5,000 words
                         </p>                        
                     </div>
 
@@ -32,7 +33,7 @@ const Checkout = ({setBasicAmount}) => {
                         </p>
 
                         <p className="text-primary md:text-lg">
-                            $0.06 per word
+                            $0.05 per word
                         </p>
                     </div>
                 </div>
@@ -58,7 +59,6 @@ const Checkout = ({setBasicAmount}) => {
                             <p>
                                 Euro Domiciliary Account
                             </p>
-
                             <p>
                                 <span className="font-bold">Bank: </span>GT Bank {"(Worldwide)"}
                             </p>
@@ -140,4 +140,4 @@ const Checkout = ({setBasicAmount}) => {
     )
 }
 
-export default Checkout
+export default Checkout2
