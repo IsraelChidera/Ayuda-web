@@ -22,7 +22,10 @@ const Footer = () => {
                                 
                                 className='rounded-full p-2 bg-primary'      
                             >
-                                <a href="#">
+                                <a 
+                                    target="_blank" 
+                                    href="https://www.linkedin.com/in/william-oharisi-07b309257"
+                                >
                                     <i className="fa-brands fa-linkedin"></i>
                                 </a>                                
                             </span>
@@ -33,7 +36,10 @@ const Footer = () => {
                                 
                                 className='rounded-full p-2 bg-primary'      
                             >
-                                <a href="#">
+                                <a 
+                                    target="_blank" 
+                                    href="https://twitter.com/oharisi_william?t=BD1JgauXKXFDwgSCbfTzLg&s=09"
+                                >
                                     <i className="fa-brands fa-twitter"></i>
                                 </a>                                
                             </span>

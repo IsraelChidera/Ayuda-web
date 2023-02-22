@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Layout from '../components/Layout';
 import logo from '../assets/gt.jpg';
 import logo2 from '../assets/gtbank.png';
+import skype from '../assets/skype.jpg';
 
 const Checkout3 = ({setBasicAmount}) => {  
 
@@ -133,7 +134,30 @@ const Checkout3 = ({setBasicAmount}) => {
                             or send a SMS to <span className="font-semibold">09014960716</span>
                         </p>
                     </div>
-                </div>                
+                </div>    
+
+                <div className="flex  mt-10 mb-8">
+                    <div className="md:mr-6 mr-0">
+                        <img src={skype} className="w-20 h-20" alt="skype logo"/>
+                    </div>
+
+                    <div className="flex items-center md:pl-0 pl-6 md:mt-0 mt-2">
+                        <p>
+                            <span className="font-semibold">
+                                Skype: live:.cid.db16bf12e52ab168
+                            </span>
+                        </p>                            
+                    </div>
+                </div>   
+
+                <p className='pt-4 text-lg'>
+                    We also accept payment through 
+                    <span className="font-semibold text-primary italic uppercase"> cryptocurrency</span>. 
+                    Kindly <span>contact us</span> for further inquiries.  
+                    Contact us via email 
+                    <span className="font-semibold text-primary"> AyudaContent@gmail.com </span>
+                    or send a SMS to <span className="font-semibold text-primary">09014960716</span>  
+                </p>              
                 
             </section>
         </Layout>

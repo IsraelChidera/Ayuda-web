@@ -6,6 +6,10 @@ const Subscribe = () => {
 
     AOS.init();
 
+    const onSubscribeHandleClick = () =>{
+
+    }
+
   return (
     <section 
         data-aos="fade-up"
@@ -19,24 +23,30 @@ const Subscribe = () => {
                     Subscribe
                 </p>
                 
-                <p className='font-bold text-xl'>
-                    Subscribe to Get the Latest News
-                    About us
+                <p className='font-bold text-xl md:text-3xl'>
+                    Subscribe to Join our Community                    
                 </p>
 
                 <p className='text-xs'>
                     Please drop your e-mail below to 
-                    get daily update about what we do
+                    explore our community 
                 </p>
 
                 <div className='mt-6 flex justify-center items-center'>
-                    <form>
-                        <input
-                            type="text"
-                            placeholder="Enter Your Email Address"
-                            className='py-2 px-4 rounded-xl border
-                            border-darker w-full'
-                        />
+                    <form>                        
+                        <div>
+                            <button 
+                                className="px-10 py-3 text-sm             
+                                font-semibold rounded-full border 
+                                border-purple-200 bg-primary text-white"
+                                onClick={onSubscribeHandleClick}
+                            >
+                                <a target="_blank" href="https://forms.gle/8mJzf4sb9ZwxaBe18">
+                                    Subscribe
+                                </a>                                
+                            </button>
+                        </div>
+
                     </form>
                 </div>
             </div>
